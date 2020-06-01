@@ -17,7 +17,7 @@ app.use(express.static('public'));
 MongoClient.connect(dbConnectionString,{ useUnifiedTopology: true})
   .then(client=>{
     console.log('Connected to Database');
-    const db = client.db('kennel');
+    const db = client.db('heroku_054w1lzf');
     const collection = db.collection('turtles');
 
     app.get('/turtles', (req, res) => {
